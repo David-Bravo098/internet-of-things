@@ -1,3 +1,7 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 """
 Django settings for iot_app project.
 
@@ -20,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure--x2y&m1&30act8u1y8-s%z+32ys!9&-m@ak^5!4qzezmx0695$'
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
